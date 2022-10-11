@@ -2,6 +2,7 @@ import React from 'react'
 import { useRecoilState, atom } from 'recoil'
 import { DebugObserver } from '../../App'
 
+// features配下に閉じている
 export const useA = () => {
   const aState = atom({
     key: 'aState',

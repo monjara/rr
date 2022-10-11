@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useRecoilState, atom } from 'recoil'
 import { DebugObserver } from '../../App'
 
+// 全体から見えてしまう
 export const bState = atom({
   key: 'bState',
   default: 'bstate'
