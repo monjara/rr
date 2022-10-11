@@ -1,20 +1,22 @@
 import React from 'react'
-import { useRecoilValue, atom } from 'recoil'
+import { useRecoilState, atom } from 'recoil'
 import { DebugObserver } from '../../App'
 
-const useA = () => {
+export const useA = () => {
   const aState = atom({
     key: 'aState',
     default: 'astate'
   })
-  const a = useRecoilValue(aState)
-  return a
+  const [a, setA] = useRecoilState(aState)
+  return {
+    a,
+    setA
+  }
 }
 
 
 const Index = () => {
-
-  const a = useA()
+  const { a } = useA()
 
   // expected: astate
   console.log(a)
