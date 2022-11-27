@@ -11,6 +11,14 @@ export default defineConfig({
   build: {
     outDir: '../build'
   },
-  envDir: '../'
+  envDir: '../',
+  resolve: {
+    alias: {
+      './runtimeConfig': './runtimeConfig.browser',
+    }
+  },
+  define: {
+    "global": {},
+  },
 })
 
