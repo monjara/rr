@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ChakraProvider } from '@chakra-ui/react'
 import {
   Route,
   RouterProvider,
@@ -20,10 +19,8 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <ChakraProvider>
-      <RecoilRoot>
-        <RouterProvider router={router} />
-      </RecoilRoot>
-    </ChakraProvider>
+    <RecoilRoot>
+      <RouterProvider router={router} />
+    </RecoilRoot>
   </React.StrictMode>
 )
